@@ -42,14 +42,7 @@ function isPositive(number) {
  *  -0.1, 0, 0.2  => 0.2
  */
 function getMaxNumber(a, b, c) {
-  let maxNumber = a;
-  if (b > maxNumber) {
-    maxNumber = b;
-  }
-  if (c > maxNumber) {
-    maxNumber = c;
-  }
-  return maxNumber;
+  const maxNumber = a;
 }
 
 /**
@@ -92,10 +85,8 @@ function canQueenCaptureKing(/* queen, king */) {
  *  2, 2, 5   => false
  *  3, 0, 3   => false
  */
-function isIsoscelesTriangle(a, b, c) {
-  const isIsosceles = a === b || a === c || b === c;
-  const isTraingle = a + b > c && a + c > b && b + c > a;
-  return !!(isIsosceles && isTraingle);
+function isIsoscelesTriangle(/* a, b, c */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -112,28 +103,8 @@ function isIsoscelesTriangle(a, b, c) {
  *  10  => X
  *  26  => XXVI
  */
-function convertToRomanNumerals(num) {
-  const romanTenNumerals = ['', 'X', 'XX', 'XXX'];
-  const romanUnitNumerals = [
-    '',
-    'I',
-    'II',
-    'III',
-    'IV',
-    'V',
-    'VI',
-    'VII',
-    'VIII',
-    'IX',
-  ];
-  let result = '';
-
-  const tens = Math.floor(num / 10);
-  const units = num % 10;
-
-  result = romanTenNumerals[tens] + romanUnitNumerals[units];
-
-  return result;
+function convertToRomanNumerals(/* num */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -185,16 +156,8 @@ function isPalindrome(/* str */) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(str, letter, index = 0) {
-  if (str[index] === undefined) {
-    return -1;
-  }
-
-  if (str[index] === letter) {
-    return index;
-  }
-
-  return getIndexOf(str, letter, index + 1);
+function getIndexOf(/* str, letter */) {
+  throw new Error('Not implemented');
 }
 
 /**

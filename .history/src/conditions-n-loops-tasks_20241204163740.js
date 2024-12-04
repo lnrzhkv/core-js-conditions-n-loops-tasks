@@ -131,9 +131,7 @@ function convertToRomanNumerals(num) {
   const tens = Math.floor(num / 10);
   const units = num % 10;
 
-  result = romanTenNumerals[tens] + romanUnitNumerals[units];
-
-  return result;
+  result = romanTens[tens] + romanUnits[units];
 }
 
 /**
@@ -185,16 +183,8 @@ function isPalindrome(/* str */) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(str, letter, index = 0) {
-  if (str[index] === undefined) {
-    return -1;
-  }
-
-  if (str[index] === letter) {
-    return index;
-  }
-
-  return getIndexOf(str, letter, index + 1);
+function getIndexOf(/* str, letter */) {
+  throw new Error('Not implemented');
 }
 
 /**

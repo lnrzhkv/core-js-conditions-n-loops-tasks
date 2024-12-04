@@ -112,28 +112,8 @@ function isIsoscelesTriangle(a, b, c) {
  *  10  => X
  *  26  => XXVI
  */
-function convertToRomanNumerals(num) {
-  const romanTenNumerals = ['', 'X', 'XX', 'XXX'];
-  const romanUnitNumerals = [
-    '',
-    'I',
-    'II',
-    'III',
-    'IV',
-    'V',
-    'VI',
-    'VII',
-    'VIII',
-    'IX',
-  ];
-  let result = '';
-
-  const tens = Math.floor(num / 10);
-  const units = num % 10;
-
-  result = romanTenNumerals[tens] + romanUnitNumerals[units];
-
-  return result;
+function convertToRomanNumerals(/* num */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -185,16 +165,8 @@ function isPalindrome(/* str */) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(str, letter, index = 0) {
-  if (str[index] === undefined) {
-    return -1;
-  }
-
-  if (str[index] === letter) {
-    return index;
-  }
-
-  return getIndexOf(str, letter, index + 1);
+function getIndexOf(/* str, letter */) {
+  throw new Error('Not implemented');
 }
 
 /**

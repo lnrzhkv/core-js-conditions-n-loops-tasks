@@ -185,16 +185,10 @@ function isPalindrome(/* str */) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(str, letter, index = 0) {
+function getIndexOf(str, letter, index) {
   if (str[index] === undefined) {
     return -1;
   }
-
-  if (str[index] === letter) {
-    return index;
-  }
-
-  return getIndexOf(str, letter, index + 1);
 }
 
 /**

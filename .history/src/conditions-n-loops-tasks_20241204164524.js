@@ -167,9 +167,7 @@ function convertNumberToString(/* numberStr */) {
  *  '0123210'   => true
  *  'qweqwe'    => false
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
-}
+function isPalindrome(str) {}
 
 /**
  * Finds the first occurrence of a letter in a string.
@@ -185,16 +183,8 @@ function isPalindrome(/* str */) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(str, letter, index = 0) {
-  if (str[index] === undefined) {
-    return -1;
-  }
-
-  if (str[index] === letter) {
-    return index;
-  }
-
-  return getIndexOf(str, letter, index + 1);
+function getIndexOf(/* str, letter */) {
+  throw new Error('Not implemented');
 }
 
 /**
