@@ -22,10 +22,7 @@
  *  -5 => false
  */
 function isPositive(number) {
-  if (number >= 0) {
-    return true;
-  }
-  return false;
+  return number >= 0;
 }
 
 /**
@@ -151,8 +148,50 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  function convertChar(char) {
+    switch (char) {
+      case '0':
+        return 'zero';
+      case '1':
+        return 'one';
+      case '2':
+        return 'two';
+      case '3':
+        return 'three';
+      case '4':
+        return 'four';
+      case '5':
+        return 'five';
+      case '6':
+        return 'six';
+      case '7':
+        return 'seven';
+      case '8':
+        return 'eight';
+      case '9':
+        return 'nine';
+      case '10':
+        return 'ten';
+      case '.':
+      case ',':
+        return 'point';
+      case '-':
+        return 'minus';
+      default:
+        return '';
+    }
+  }
+
+  let str = '';
+
+  for (let i = 0; i < numberStr.length; i += 1) {
+    const whiteSpace = i !== numberStr.length - 1 ? ' ' : '';
+
+    str += convertChar(numberStr[i]) + whiteSpace;
+  }
+
+  return str;
 }
 
 /**
@@ -167,8 +206,24 @@ function convertNumberToString(/* numberStr */) {
  *  '0123210'   => true
  *  'qweqwe'    => false
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  let output = true;
+
+  for (let i = 0; i < str.length; i += 1) {
+    const leftSymbol = str[i];
+    const rightSymbol = i === 0 ? str[str.length - 1] : str[str.length - 1 - i];
+
+    if (leftSymbol !== rightSymbol) {
+      output = false;
+      break;
+    }
+
+    if (leftSymbol === rightSymbol) {
+      output = true;
+    }
+  }
+
+  return output;
 }
 
 /**
@@ -212,8 +267,18 @@ function getIndexOf(str, letter, index = 0) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(/* num, digit */) {
-  throw new Error('Not implemented');
+function isContainNumber(num, digit) {
+  const strNum = `${num}`;
+  let output = false;
+
+  for (let i = 0; i < strNum; i += 1) {
+    if (+strNum[i] === digit) {
+      output = true;
+      break;
+    }
+  }
+
+  return output;
 }
 
 /**
